@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Task Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <div class="chat-container">
+        <header>
+            <h2>🤖 Smart Task Assistant</h2>
+            <p>Your AI-powered productivity partner</p>
+        </header>
+
+        <div id="chat-box">
+            <div class="message bot">
+                Hello! I can create, list and update your tasks.
+                How can I help?
+            </div>
+        </div>
+
+        <div id="loading" style="display:none;">Thinking...</div>
+
+        <form id="chat-form">
+            <input
+                type="text"
+                id="user-input"
+                placeholder="Type your message..."
+                required
+            >
+            <button type="submit" id="send-btn">Send</button>
+        </form>
+
+        <button id="reset-btn" type="button">Reset Conversation</button>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
