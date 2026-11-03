@@ -13,6 +13,34 @@ An AI-powered task management assistant built with Python, Flask, LangChain, Gro
 - Session-based chat memory.
 - Web-based chatbot interface.
 
+
+## System Architecture
+
+The application follows a simple architecture:
+
+1. **Frontend:** HTML, CSS, and JavaScript provide the chatbot interface.
+2. **Flask Backend:** Handles chat requests and API communication.
+3. **LangChain Agent:** Understands user instructions and selects the appropriate tools.
+4. **Groq LLM:** Generates AI responses.
+5. **Tools:** Perform task creation, task listing, and status updates.
+6. **SQLite Database:** Stores tasks and session-based chat history.
+
+## Available API Endpoints
+
+| Method | Endpoint | Purpose |
+|---|---|---|
+| GET | `/` | Load chatbot interface |
+| POST | `/chat` | Send a message to the AI agent |
+| GET | `/history` | Retrieve session conversation |
+| POST | `/reset` | Clear session conversation |
+
+## Available Agent Tools
+
+- `create_task`: Creates a task with title, due date, and priority.
+- `list_tasks`: Retrieves tasks filtered by status.
+- `update_task_status`: Changes a task's status using its ID.
+
+
 ## Technologies Used
 
 - Python
